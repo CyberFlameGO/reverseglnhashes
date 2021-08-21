@@ -17,7 +17,7 @@ async function main() {
     const gln = firstNums + (i + "").padStart(7, '0')
     const glnHash = base64.stringify(sha384(gln))
     if (hashes.includes(glnHash)) {
-      console.log({gln, glnHash})
+      console.log(JSON.stringify({gln, glnHash}))
       matches++;
       if (matches >= hashes.length) {
         return
