@@ -1,5 +1,6 @@
 const base64 = require("crypto-js/enc-base64");
 const sha384 = require("crypto-js/sha384");
+const fetch = require('node-fetch')
 
 const firstNums = "942930"
 
