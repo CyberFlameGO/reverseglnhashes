@@ -10,7 +10,7 @@ async function main() {
   const data = await res.json()
   const items = data.items
   const glnHashes = items.map(item => item.glnHash)
-  const hashes = new Set(glnHashes)
+  const hashes = [...new Set(glnHashes)]
 
   let matches = 0
   for(var i = 0; i <= 9999999; i++) {
