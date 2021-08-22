@@ -13,17 +13,22 @@ async function main() {
   const hashes = [...new Set(glnHashes)]
 
   let matches = 0
+  console.log("{")
   for(var i = 0; i <= 9999999; i++) {
     const gln = firstNums + (i + "").padStart(7, '0')
     const glnHash = base64.stringify(sha384(gln))
     if (hashes.includes(glnHash)) {
-      console.log(JSON.stringify({gln, glnHash}))
       matches++;
       if (matches >= hashes.length) {
+        console.log(`${JSON.stringify({gln, glnHash})}`)
         return
+      }
+      else {
+        console.log(`${JSON.stringify({gln, glnHash})},`)
       }
     }
   }
+  console.log("}")
 }
 
 main()
