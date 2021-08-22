@@ -21,6 +21,7 @@ async function main() {
       matches++;
       if (matches >= hashes.length) {
         console.log(`${JSON.stringify({gln, glnHash})}`)
+        console.log("]")
         return
       }
       else {
@@ -28,7 +29,6 @@ async function main() {
       }
     }
   }
-  console.log("]")
 }
 
 main()
