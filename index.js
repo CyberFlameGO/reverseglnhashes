@@ -13,7 +13,7 @@ async function main() {
   const hashes = [...new Set(glnHashes)]
 
   let matches = 0
-  console.log("{")
+  console.log("[")
   for(var i = 0; i <= 9999999; i++) {
     const gln = firstNums + (i + "").padStart(7, '0')
     const glnHash = base64.stringify(sha384(gln))
@@ -28,7 +28,7 @@ async function main() {
       }
     }
   }
-  console.log("}")
+  console.log("]")
 }
 
 main()
