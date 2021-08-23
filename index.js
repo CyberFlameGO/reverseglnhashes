@@ -1,9 +1,13 @@
 const base64 = require("crypto-js/enc-base64");
 const sha384 = require("crypto-js/sha384");
 const fetch = require('node-fetch')
+const fs = require('fs');
 
-const firstNums = "942930"
 
+function save(str) {
+  console.log(str)
+  fs.appendFileSync('glnHashesMap.json', str + "\n");
+}
 
 async function main() {
   const res = await fetch("https://exposure-events.tracing.covid19.govt.nz/current-exposure-events.json")
@@ -11,24 +15,29 @@ async function main() {
   const items = data.items
   const glnHashes = items.map(item => item.glnHash)
   const hashes = [...new Set(glnHashes)]
+  fs.writeFileSync('glnHashesMap.json', ""); // clear file
+  reverseHashes(hashes)
+}
 
+function reverseHashes(hashes) {
+  const firstNums = "942930"
   let matches = 0
-  console.log("[")
+  save('{')
+  save(`"lastUpdated": ${Date.now()},`)
+  save('"glnHashGlnPairs":[')
   for(var i = 0; i <= 9999999; i++) {
-    const gln = firstNums + (i + "").padStart(7, '0')
+    const gln = firstNums + (i + '').padStart(7, '0')
     const glnHash = base64.stringify(sha384(gln))
     if (hashes.includes(glnHash)) {
       matches++;
       if (matches >= hashes.length) {
-        console.log(`${JSON.stringify({gln, glnHash})}`)
-        console.log("]")
-        return
+        save(`${JSON.stringify({gln, glnHash})}`)
+        break
       }
-      else {
-        console.log(`${JSON.stringify({gln, glnHash})},`)
-      }
+      save(`${JSON.stringify({gln, glnHash})},`)
     }
   }
+  save(']}')
 }
 
 main()
