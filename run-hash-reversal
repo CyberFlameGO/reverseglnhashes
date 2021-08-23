@@ -5,4 +5,4 @@ cd "$(dirname "$0")"
 node index.js
 git add .
 git commit -m "updated from $(TZ='Pacific/Auckland' date)"
-git push
+git pull --rebase && git push
