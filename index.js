@@ -4,9 +4,9 @@ const fetch = require('node-fetch')
 const fs = require('fs');
 
 
-function save(str) {
+function save(file, str) {
   console.log(str)
-  fs.appendFileSync('glnHashesMap.json', str + "\n");
+  fs.appendFileSync(file, str + "\n");
 }
 
 async function main() {
@@ -17,30 +17,28 @@ async function main() {
   const items = data.items
   const glnHashes = items.map(item => item.glnHash)
   const hashes = [...new Set(glnHashes)]
-  fs.writeFileSync('glnHashesMap.json', ""); // clear file
+  fs.writeFileSync('glnPairs.json', ''); // clear file
+  fs.writeFileSync('lastUpdatedAt.json', `"${new Date().toISOString()}"`); // rewrite file
   reverseHashes(hashes)
 }
 
 function reverseHashes(hashes) {
   const firstNums = "942930"
   let matches = 0
-  save('{')
-  save(`  "lastUpdatedAt": "${new Date().toISOString()}",`)
-  save('  "glnPairs": [')
+  save('glnPairs.json', '[')
   for(var i = 0; i <= 9999999; i++) {
     const gln = firstNums + (i + '').padStart(7, '0')
     const glnHash = base64.stringify(sha384(gln))
     if (hashes.includes(glnHash)) {
       matches++;
       if (matches >= hashes.length) {
-        save(`    ${JSON.stringify({gln, glnHash})}`)
+        save('glnPairs.json', `  ${JSON.stringify({gln, glnHash})}`)
         break
       }
-      save(`    ${JSON.stringify({gln, glnHash})},`)
+      save('glnPairs.json', `  ${JSON.stringify({gln, glnHash})},`)
     }
   }
-  save(']')
-  save('}')
+  save('glnPairs.json', ']')
 }
 
 main()
