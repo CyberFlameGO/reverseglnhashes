@@ -12,6 +12,7 @@ function save(str) {
 async function main() {
   const res = await fetch("https://exposure-events.tracing.covid19.govt.nz/current-exposure-events.json")
   const dataStr = await res.text()
+  console.log('dataStr', dataStr)
   const data = JSON.parse(dataStr)
   const items = data.items
   const glnHashes = items.map(item => item.glnHash)
