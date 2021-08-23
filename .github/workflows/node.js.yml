@@ -29,7 +29,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
+    - run: yarn install --frozen-lockfile
     - run: node index.js
     - run: git add .
     - run: git commit -m "update from $(TZ='Pacific/Auckland' date)"
