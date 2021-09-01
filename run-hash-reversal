@@ -2,7 +2,6 @@
 
 set -e
 cd "$(dirname "$0")"
-killall node || true
 node index.js
 git add .
 git commit -m "updated from $(TZ='Pacific/Auckland' date)"
