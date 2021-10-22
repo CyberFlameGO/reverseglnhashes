@@ -1,0 +1,11 @@
+{
+    "apps": [
+        {
+            "name": "reverseglnhashes",
+            "script": "./run-hash-reversal",
+            "restart_delay": 600000,
+            "time": true,
+	    "interpreter": "bash"
+        }
+    ]
+}
