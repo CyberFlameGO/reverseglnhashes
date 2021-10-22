@@ -25,20 +25,16 @@ async function main() {
 function reverseHashes(hashes) {
   const firstNums = "942930"
   let matches = 0
-  save('glnPairs.json', '[')
+  const glnPairs = []
   for(var i = 0; i <= 9999999; i++) {
     const gln = firstNums + (i + '').padStart(7, '0')
     const glnHash = base64.stringify(sha384(gln))
     if (hashes.includes(glnHash)) {
       matches++;
-      if (matches >= hashes.length) {
-        save('glnPairs.json', `  ${JSON.stringify({gln, glnHash})}`)
-        break
-      }
-      save('glnPairs.json', `  ${JSON.stringify({gln, glnHash})},`)
+      glnPairs.push({gln, glnHash})
     }
   }
-  save('glnPairs.json', ']')
+  save('glnPairs.json', JSON.stringify(glnPairs, null, 2))
 }
 
 main()
