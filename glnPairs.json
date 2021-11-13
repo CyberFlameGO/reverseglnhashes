@@ -476,20 +476,12 @@
     "glnHash": "QDI3Rq0emzGlDzKHayKHq7llU8RDliet8Kx6Jp7uA8E9HjhogSKIXbGI9eEVhYkS"
   },
   {
-    "gln": "9429300509647",
-    "glnHash": "qkNYVTHHa5Bg8H0XH4f8K6kOfjdUBZ69kMsvtB14Wtf5vBGod3nsSMO0k/brtwqO"
-  },
-  {
     "gln": "9429300511114",
     "glnHash": "ezMgeb0Uqkx+SCKDB8sr+TWqKY60J8+RV0zrjJMgUU6SHfMCXfDsBnx//NHlrxMY"
   },
   {
     "gln": "9429300522073",
     "glnHash": "LmKY9h0vdgiMtYPof9aXKUEpy3w9EwJ7h4q8iecaCWWylVafX4UeSemfVQBv2iUM"
-  },
-  {
-    "gln": "9429300524923",
-    "glnHash": "THb9HsiRBQNkS68ll3jzdpiqP9+7ycj9tnVTIsZvWqIjBTiSVOyvKM5pyj8XNHiu"
   },
   {
     "gln": "9429300525371",
@@ -856,16 +848,8 @@
     "glnHash": "4KXDK4Bosx3+v8R32GlUw6OA3FGTY0POOsDYb1YPyS6h7U6qFlsLqOHDQKrfyUnj"
   },
   {
-    "gln": "9429301132554",
-    "glnHash": "2O5SuhGckSbRMN/x5ldDIT445T2KkwzoAFPQMY1PMkdbJvuDOtzhKVDfnA5/fd45"
-  },
-  {
     "gln": "9429301140153",
     "glnHash": "2pwMoUctzHBTN5mAO+qiqx3tJpKHSXswoWH/CrDLorqpTyrW10Ru4lH7vGhfypnW"
-  },
-  {
-    "gln": "9429301140252",
-    "glnHash": "JvbZpa1FfvgUFtlIdrDsX7uNqeGcc2gBL/31KuU/s2OfQI0ZgrbR7sUS0VURlXKR"
   },
   {
     "gln": "9429301142911",
@@ -882,6 +866,10 @@
   {
     "gln": "9429301156390",
     "glnHash": "GbBchDfWv+bxn1hO0dQUJpPtyyWmOfDP0jBxnD9sV9zJX6xGZ14Gs8cQN796Wydg"
+  },
+  {
+    "gln": "9429301163206",
+    "glnHash": "WBk5dp5LNWcvfomsEVjv0lSPPCqoCOQVyk+IRJwOE97qgOxAC/0fQ3jA0O6Dq4x+"
   },
   {
     "gln": "9429301190592",
@@ -1332,20 +1320,12 @@
     "glnHash": "TN1DeiQORj9mHXIxq9EmHwXOi2Gx8+7Iac0Gg3mZhc483zzzobnP9dIz58cYZxSR"
   },
   {
-    "gln": "9429303304126",
-    "glnHash": "6wZb4AquD0lF1hSFJUmDjEHWlqe0550WF/VACfiqJqFV43Pl9Vin0nM271Pgvrex"
-  },
-  {
     "gln": "9429303313777",
     "glnHash": "3VU4imUocQSw8+qMrUYGJ+PoySNZ7d3p3CwkA6yCoqXp9NoPWvmJMw0HyITAcRCo"
   },
   {
     "gln": "9429303317645",
     "glnHash": "p1tfnk5KSx9K8x+c4Ml9CIP2pSHFu/53CUyr9bstwx97Xwr3XZxhcEd9oYjLdAao"
-  },
-  {
-    "gln": "9429303323929",
-    "glnHash": "F7YYirPBrvOIhQg4erdFQ/P3e6L962uHP7xzwzPzi2ePZ4P2BEBcpZM7+N6Pzait"
   },
   {
     "gln": "9429303361570",
@@ -1752,16 +1732,8 @@
     "glnHash": "iRavocDsZDZvI4P6EfUUj9litz2UOwRxZh6N0V+B1r+xpfwSnZPr6NzxjCXde/zB"
   },
   {
-    "gln": "9429306096790",
-    "glnHash": "Z+lv0YlSRFQVRtwbEV1rO8WbrJBMDOGjqo+wGOvqoMMbgVaXipk6cjlDw0Rr8F6t"
-  },
-  {
     "gln": "9429306183339",
     "glnHash": "PTo0iZBX2OwRNsHED+TRf+/nPdJbh85BbFnOl+T8fOTUQI3i/2eCmOFgOecOfUa4"
-  },
-  {
-    "gln": "9429306242029",
-    "glnHash": "WKQ4d/Ur9aQOWsW0tU6q8ip/qaFsraTGGwHdsKIHVf24ebZCWuEVue7WlsBPLjuy"
   },
   {
     "gln": "9429306356450",
@@ -1810,10 +1782,6 @@
   {
     "gln": "9429307544825",
     "glnHash": "tBGKbFyf2ipkS98tWxq3P+bnOqYpNiC4J/zl9Oqd6SEAxAlUtQq1Dy90PJKrmhG4"
-  },
-  {
-    "gln": "9429307766746",
-    "glnHash": "61upwBrz9A2HOP3xKaK4feb+TZXuQREFf/ASvfB4MN7Bnyj8zKU7HwVmcfLq4ocg"
   },
   {
     "gln": "9429307887670",
